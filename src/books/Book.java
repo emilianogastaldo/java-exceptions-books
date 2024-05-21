@@ -27,6 +27,38 @@ public class Book {
         return value;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = isValid(title);
+    }
+
+    public int getPageNumber() {
+        return pageNumber;
+    }
+
+    public void setPageNumber(int pageNumber) {
+        this.pageNumber = isValid(pageNumber);
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = isValid(author);
+    }
+
+    public String getEditor() {
+        return editor;
+    }
+
+    public void setEditor(String editor) {
+        this.editor = isValid(editor);
+    }
+
     @Override
     public String toString(){
         return "{Titolo libro: " + title + " Numero di pagine: " + pageNumber + " Autore: "+author+" Editore: "+editor+ "}";
