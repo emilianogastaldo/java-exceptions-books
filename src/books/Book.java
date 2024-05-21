@@ -27,4 +27,9 @@ public class Book {
         return value;
     }
 
+    @Override
+    public String toString(){
+        return "{Titolo libro: " + title + " Numero di pagine: " + pageNumber + " Autore: "+author+" Editore: "+editor+ "}";
+    }
+
 }
