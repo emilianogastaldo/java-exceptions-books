@@ -68,16 +68,15 @@ public class Main {
 //        Leggo il file
         System.out.println("************ LEGGO IL FILE *************** \n");
         File libri = new File("./resources/data.txt");
-        Scanner reader = null;
         try {
-            reader = new Scanner(libri);
+            Scanner reader = new Scanner(libri);
             while(reader.hasNextLine()){
                 String data = reader.nextLine();
                 System.out.println(data);
             }
+            reader.close();
         } catch (FileNotFoundException e) {
             System.out.println("Non trovo il file");
         }
-        reader.close();
     }
 }
