@@ -12,6 +12,16 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Quanti libri vuoi inserire?");
         int numLibri = Integer.parseInt(scanner.nextLine());
+        try{
+            if(numLibri <= 0){
+                throw new Exception("Non puoi mettere un numero negativo di pagine");
+            }
+        }catch(NumberFormatException e){
+//                Recupero l'errore del parseInt
+            System.out.println("Devi inserire un numero senza virgola");
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
         Book[] books = new Book[numLibri];
         int i = 0;
         while (i < books.length){
